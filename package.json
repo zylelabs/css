@@ -1,0 +1,16 @@
+{
+	"name": "zyle.css",
+	"version": "1.0.0",
+	"description": "",
+	"author": "Gabriel Augusto <gabrielaugustodev@gmail.com>",
+	"main": "css/zyle.min.css",
+	"scripts": {
+		"build": "npm run build:sass && npm run build:compress",
+		"build:sass": "sass src/main.scss css/zyle.css --no-source-map",
+		"build:compress": "sass src/main.scss css/zyle.min.css --no-source-map --style=compressed"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"sass": "^1.56.1"
+	}
+}
