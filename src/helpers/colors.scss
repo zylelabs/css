@@ -1,0 +1,29 @@
+$color-primary: #2877ee;
+$color-secondary: #d3dff1;
+$color-success: #00c851;
+$color-danger: #c52020;
+$color-warning: #ff9c07;
+$color-info: #1ba1ca;
+$color-dark: #3a3a41;
+$color-light: #eeeeee;
+$color-gray: #888888;
+
+$color-classes: (
+	primary: $color-primary,
+	secondary: $color-secondary,
+	success: $color-success,
+	danger: $color-danger,
+	warning: $color-warning,
+	info: $color-info,
+	dark: $color-dark,
+	light: $color-light,
+);
+
+@each $name, $color in $color-classes {
+	.text-#{$name} {
+		color: $color;
+	}
+	.bg-#{$name} {
+		background-color: $color;
+	}
+}
