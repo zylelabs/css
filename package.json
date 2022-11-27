@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "npm run build:sass && npm run build:compress",
 		"build:watch": "sass -w src/main.scss css/zyle.css --no-source-map",
-		"build:sass": "sass src/main.scss css/zyle.css --no-source-map",
+		"build:sass": "sass src/main.scss css/zyle.css",
 		"build:compress": "sass src/main.scss css/zyle.min.css --no-source-map --style=compressed"
 	},
 	"license": "ISC",
