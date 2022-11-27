@@ -1,0 +1,15 @@
+$border-radius: 0.25rem;
+
+$screen-breakpoints: (
+	xxl: 1400px,
+	xl: 1280px,
+	lg: 1024px,
+	md: 768px,
+	sm: 640px,
+	xs: 480px,
+	xxs: 360px,
+);
+
+@function screen-breakpoint($size) {
+	@return map-get($screen-breakpoints, $size);
+}
