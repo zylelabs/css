@@ -1,0 +1,37 @@
+$grid-gutter: 1.5rem;
+$container-spacing: 0.5rem;
+
+.container {
+	margin: 0 auto;
+	width: auto;
+	padding: 0 $container-spacing;
+
+	@each $name, $size in $screen-breakpoints {
+		&.is-#{$name} {
+			max-width: $size;
+		}
+	}
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.col {
+	flex: 1;
+}
+
+.col-auto {
+	flex: 0 0 auto;
+	max-width: none;
+	width: auto;
+}
+
+@for $col from 1 to 13 {
+	.col-#{$col} {
+		flex: 0 0 calc((100% / (12 / $col)) - $grid-gutter);
+		max-width: calc((100% / (12 / $col)) - $grid-gutter);
+	}
+}
