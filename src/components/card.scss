@@ -1,0 +1,30 @@
+.card {
+	border-radius: $border-radius;
+	border: 1px solid lighten($color-gray, 40);
+	box-shadow: 0 0 0.4rem rgba(136, 136, 136, 0.1);
+
+	.card-header,
+	.card-body,
+	.card-footer {
+		padding: 0.8rem;
+	}
+
+	.card-header {
+		display: flex;
+		box-shadow: 0 0.1rem 0.4rem rgba(136, 136, 136, 0.2);
+
+		.card-header-title {
+			padding: 0.15rem 0;
+			flex-grow: 1;
+			font-weight: 500;
+		}
+	}
+
+	.card-body {
+		margin: 0.4rem 0;
+	}
+
+	.card-footer {
+		border-top: 1px solid lighten($color-gray, 40);
+	}
+}
