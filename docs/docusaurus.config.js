@@ -9,7 +9,7 @@ const config = {
 	title: 'Zyle.css',
 	tagline: 'Take off with a lightweight, responsive CSS framework',
 	url: 'https://zylelabs.github.io/css',
-	baseUrl: '/css/',
+	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.png',
