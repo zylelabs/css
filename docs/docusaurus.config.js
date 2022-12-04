@@ -12,7 +12,7 @@ const config = {
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
-	favicon: 'img/favicon.ico',
+	favicon: 'img/favicon.png',
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
@@ -33,19 +33,10 @@ const config = {
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
 				docs: {
+					routeBasePath: '/docs',
 					sidebarPath: require.resolve('./sidebars.js'),
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl:
-						'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
 				},
-				blog: {
-					showReadingTime: true,
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					editUrl:
-						'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-				},
+				blog: false,
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
 				},
@@ -57,15 +48,16 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: 'Zyle.css',
+				title: 'ZYLE.CSS',
 				logo: {
 					alt: 'Zyle.css Logo',
-					src: 'img/logo.svg',
+					src: 'img/logo.png',
+					href: '/docs/get-started/introduction',
 				},
 				items: [
 					{
 						type: 'doc',
-						docId: 'intro',
+						docId: 'get-started/introduction',
 						position: 'left',
 						label: 'Docs',
 					},
@@ -84,7 +76,7 @@ const config = {
 						items: [
 							{
 								label: 'Get Started',
-								to: '/docs/intro',
+								to: '/docs/get-started/introduction',
 							},
 						],
 					},
@@ -115,7 +107,6 @@ const config = {
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} Zyle Labs - zyle.css, Inc. Docs built with Docusaurus.`,
 			},
 			prism: {
 				theme: lightCodeTheme,
