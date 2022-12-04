@@ -1,3 +1,3 @@
 # Browser support
 
-test
+This documentation is currently under maintenance
