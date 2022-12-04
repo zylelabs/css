@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
 	title: 'Zyle.css',
 	tagline: 'Take off with a lightweight, responsive CSS framework',
-	url: 'https://zylelabs.github.io/css/',
-	baseUrl: '/css',
+	url: 'https://zylelabs.github.io/css',
+	baseUrl: '/css/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.png',
