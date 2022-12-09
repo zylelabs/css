@@ -2,15 +2,17 @@
 	"name": "zyle.css",
 	"version": "0.0.1",
 	"description": "Take off with a lightweight, responsive CSS framework",
+	"homepage": "https://css.zylelabs.com/",
+	"repository": "https://github.com/ZyleLabs/css",
 	"author": "Gabriel Augusto <gabrielaugustodev@gmail.com>",
 	"main": "css/zyle.min.css",
+	"license": "MIT",
 	"scripts": {
 		"build": "npm run build:sass && npm run build:compress",
 		"build:watch": "sass -w scss/main.scss css/zyle.css --no-source-map",
 		"build:sass": "sass scss/main.scss css/zyle.css",
 		"build:compress": "sass scss/main.scss css/zyle.min.css --style=compressed"
 	},
-	"license": "ISC",
 	"devDependencies": {
 		"sass": "^1.56.1"
 	},
