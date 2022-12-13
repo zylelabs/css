@@ -25,4 +25,5 @@
 
 .zyle-preview {
 	@include meta.load-css('./zyle.min.css');
+	margin-bottom: 1.5rem;
 }
