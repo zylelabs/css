@@ -105,78 +105,93 @@ p {
   max-width: 360px;
 }
 
+.cols,
 .columns {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
 }
 
-.col {
+.col,
+.column {
   flex: 1;
 }
 
-.col-auto {
+.col-auto,
+.column-auto {
   flex: 0 0 auto;
   max-width: none;
   width: auto;
 }
 
-.col-1 {
+.col-1,
+.column-1 {
   flex: 0 0 calc(8.3333333333% - 1.5rem);
   max-width: calc(8.3333333333% - 1.5rem);
 }
 
-.col-2 {
+.col-2,
+.column-2 {
   flex: 0 0 calc(16.6666666667% - 1.5rem);
   max-width: calc(16.6666666667% - 1.5rem);
 }
 
-.col-3 {
+.col-3,
+.column-3 {
   flex: 0 0 calc(25% - 1.5rem);
   max-width: calc(25% - 1.5rem);
 }
 
-.col-4 {
+.col-4,
+.column-4 {
   flex: 0 0 calc(33.3333333333% - 1.5rem);
   max-width: calc(33.3333333333% - 1.5rem);
 }
 
-.col-5 {
+.col-5,
+.column-5 {
   flex: 0 0 calc(41.6666666667% - 1.5rem);
   max-width: calc(41.6666666667% - 1.5rem);
 }
 
-.col-6 {
+.col-6,
+.column-6 {
   flex: 0 0 calc(50% - 1.5rem);
   max-width: calc(50% - 1.5rem);
 }
 
-.col-7 {
+.col-7,
+.column-7 {
   flex: 0 0 calc(58.3333333333% - 1.5rem);
   max-width: calc(58.3333333333% - 1.5rem);
 }
 
-.col-8 {
+.col-8,
+.column-8 {
   flex: 0 0 calc(66.6666666667% - 1.5rem);
   max-width: calc(66.6666666667% - 1.5rem);
 }
 
-.col-9 {
+.col-9,
+.column-9 {
   flex: 0 0 calc(75% - 1.5rem);
   max-width: calc(75% - 1.5rem);
 }
 
-.col-10 {
+.col-10,
+.column-10 {
   flex: 0 0 calc(83.3333333333% - 1.5rem);
   max-width: calc(83.3333333333% - 1.5rem);
 }
 
-.col-11 {
+.col-11,
+.column-11 {
   flex: 0 0 calc(91.6666666667% - 1.5rem);
   max-width: calc(91.6666666667% - 1.5rem);
 }
 
-.col-12 {
+.col-12,
+.column-12 {
   flex: 0 0 calc(100% - 1.5rem);
   max-width: calc(100% - 1.5rem);
 }
