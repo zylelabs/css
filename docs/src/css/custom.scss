@@ -1,5 +1,5 @@
 @use 'sass:meta';
 
 .zyle-preview {
-	@include meta.load-css('../../../css/zyle.min.css');
+	@include meta.load-css('https://unpkg.com/zyle.css/css/zyle.min.css');
 }
