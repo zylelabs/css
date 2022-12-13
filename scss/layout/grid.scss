@@ -13,24 +13,28 @@ $container-spacing: 0.5rem;
 	}
 }
 
+.cols,
 .columns {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 }
 
-.col {
+.col,
+.column {
 	flex: 1;
 }
 
-.col-auto {
+.col-auto,
+.column-auto {
 	flex: 0 0 auto;
 	max-width: none;
 	width: auto;
 }
 
 @for $col from 1 to 13 {
-	.col-#{$col} {
+	.col-#{$col},
+	.column-#{$col} {
 		flex: 0 0 calc((100% / (12 / $col)) - $grid-gutter);
 		max-width: calc((100% / (12 / $col)) - $grid-gutter);
 	}
