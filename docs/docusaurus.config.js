@@ -27,6 +27,8 @@ const config = {
 		locales: ['en'],
 	},
 
+	plugins: ['docusaurus-plugin-sass'],
+
 	presets: [
 		[
 			'classic',
@@ -38,7 +40,7 @@ const config = {
 				},
 				blog: false,
 				theme: {
-					customCss: require.resolve('./src/css/custom.css'),
+					customCss: require.resolve('./src/css/custom.scss'),
 				},
 			}),
 		],
@@ -83,14 +85,6 @@ const config = {
 					{
 						title: 'Community',
 						items: [
-							// {
-							// 	label: 'Stack Overflow',
-							// 	href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-							// },
-							// {
-							// 	label: 'Discord',
-							// 	href: 'https://discordapp.com/invite/docusaurus',
-							// },
 							{
 								label: 'Twitter',
 								href: 'https://twitter.com/ZyleLabs',
