@@ -1,0 +1,20 @@
+.box-color {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.2rem;
+
+	.color-name {
+		font-weight: bold;
+		min-width: 6.1rem;
+	}
+
+	.color-preview {
+		padding: 12px 15px;
+		border-radius: 0.5rem;
+		width: auto;
+		min-width: 6.1rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		text-transform: uppercase;
+	}
+}
