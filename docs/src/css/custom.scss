@@ -1,5 +1,28 @@
 @use 'sass:meta';
 
+:root {
+	--ifm-color-primary: #2877ee;
+	--ifm-color-primary-dark: #0a4eb4;
+	--ifm-color-primary-darker: #043f97;
+	--ifm-color-primary-darkest: #002c6e;
+	--ifm-color-primary-light: #4386eb;
+	--ifm-color-primary-lighter: #5994ec;
+	--ifm-color-primary-lightest: #75acff;
+	--ifm-code-font-size: 95%;
+	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+	--ifm-color-primary: #4386eb;
+	--ifm-color-primary-dark: #2877ee;
+	--ifm-color-primary-darker: #0a4eb4;
+	--ifm-color-primary-darkest: #043f97;
+	--ifm-color-primary-light: #5994ec;
+	--ifm-color-primary-lighter: #75acff;
+	--ifm-color-primary-lightest: #8fbcff;
+	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
 .zyle-preview {
-	@include meta.load-css('https://unpkg.com/zyle.css/css/zyle.min.css');
+	@include meta.load-css('./zyle.min.css');
 }

@@ -8,10 +8,11 @@
 	"main": "css/zyle.min.css",
 	"license": "MIT",
 	"scripts": {
-		"build": "npm run build:sass && npm run build:compress",
+		"build": "npm run build:sass && npm run build:compress && npm run build:docs-style",
 		"build:watch": "sass -w scss/main.scss css/zyle.css --no-source-map",
 		"build:sass": "sass scss/main.scss css/zyle.css",
-		"build:compress": "sass scss/main.scss css/zyle.min.css --style=compressed"
+		"build:compress": "sass scss/main.scss css/zyle.min.css --style=compressed",
+		"build:docs-style": "sass scss/main.scss docs/src/css/zyle.min.css --style=compressed --no-source-map"
 	},
 	"devDependencies": {
 		"sass": "^1.56.1"
