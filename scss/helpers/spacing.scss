@@ -1,0 +1,46 @@
+$spacing-values: (
+	0: 0,
+	1: 0.25rem,
+	2: 0.5rem,
+	3: 0.75rem,
+	4: 1rem,
+	5: 1.5rem,
+	6: 2rem,
+	7: 2.5rem,
+	8: 3rem,
+	9: 4rem,
+	auto: auto,
+);
+
+@each $id, $size in $spacing-values {
+	$properties: (
+		padding: 'p',
+		margin: 'm',
+	);
+
+	@each $property, $shortcut in $properties {
+		.#{$shortcut}-#{$id} {
+			#{$property}: $size;
+		}
+		.#{$shortcut}t-#{$id} {
+			#{$property}-top: $size;
+		}
+		.#{$shortcut}r-#{$id} {
+			#{$property}-right: $size;
+		}
+		.#{$shortcut}b-#{$id} {
+			#{$property}-bottom: $size;
+		}
+		.#{$shortcut}l-#{$id} {
+			#{$property}-left: $size;
+		}
+		.#{$shortcut}x-#{$id} {
+			#{$property}-left: $size;
+			#{$property}-right: $size;
+		}
+		.#{$shortcut}y-#{$id} {
+			#{$property}-top: $size;
+			#{$property}-bottom: $size;
+		}
+	}
+}
