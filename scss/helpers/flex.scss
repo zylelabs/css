@@ -1,0 +1,11 @@
+@each $display in (flex, inline-flex) {
+	.d-#{$display} {
+		display: $display;
+	}
+}
+
+@each $direction in (row, row-reverse, column, column-reverse) {
+	.flex-#{$direction} {
+		flex-direction: $direction;
+	}
+}
