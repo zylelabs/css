@@ -1,10 +1,10 @@
-$grid-gutter: 1.5rem;
+$columns-gutter: 0.5rem;
 $container-spacing: 0.5rem;
 
 .container {
 	margin: 0 auto;
 	width: auto;
-	padding: 0 $container-spacing;
+	padding: $container-spacing;
 
 	@each $name, $size in $screen-breakpoints {
 		&.is-#{$name} {
@@ -18,24 +18,37 @@ $container-spacing: 0.5rem;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
+	margin-left: -$columns-gutter;
+	margin-right: -$columns-gutter;
+
+	> * {
+		padding-left: $columns-gutter;
+		padding-right: $columns-gutter;
+	}
 }
 
 .col,
-.column {
-	flex: 1;
-}
-
+.column,
 .col-auto,
 .column-auto {
-	flex: 0 0 auto;
-	max-width: none;
+	flex: 1 0 0%;
 	width: auto;
+	max-width: none;
 }
 
 @for $col from 1 to 13 {
 	.col-#{$col},
 	.column-#{$col} {
-		flex: 0 0 calc((100% / (12 / $col)) - $grid-gutter);
-		max-width: calc((100% / (12 / $col)) - $grid-gutter);
+		flex: 0 0 auto;
+		width: 100%;
+		max-width: calc(100% / (12 / $col));
+	}
+}
+
+@media (max-width: 991px) {
+	[class^='column-'],
+	[class^='col-'] {
+		width: 100%;
+		max-width: 100%;
 	}
 }
