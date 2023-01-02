@@ -1,0 +1,21 @@
+.navbar {
+	display: flex;
+	align-items: center;
+
+	.navbar-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		width: 100%;
+
+		.navbar-section {
+			display: flex;
+			align-items: stretch;
+		}
+	}
+
+	.navbar-item {
+		padding: 1rem 0.75rem;
+		text-decoration: none;
+	}
+}

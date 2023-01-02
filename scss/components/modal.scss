@@ -1,0 +1,56 @@
+@mixin modal-show($show) {
+	@if $show == true {
+		visibility: visible;
+		opacity: 1;
+	} @else {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+	transition: opacity 200ms;
+	z-index: 0;
+
+	@include modal-show(false);
+
+	&.target {
+		&:target {
+			@include modal-show(true);
+		}
+	}
+
+	&.active {
+		@include modal-show(true);
+	}
+
+	.modal-background {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		cursor: default;
+		z-index: -1;
+	}
+
+	&.modal-content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
