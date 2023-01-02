@@ -9,21 +9,48 @@ $color-light: #eeeeee;
 $color-gray: #888888;
 
 $color-classes: (
-	primary: $color-primary,
-	secondary: $color-secondary,
-	success: $color-success,
-	danger: $color-danger,
-	warning: $color-warning,
-	info: $color-info,
-	dark: $color-dark,
-	light: $color-light,
+	primary: (
+		$color-primary,
+		$color-light,
+	),
+	secondary: (
+		$color-secondary,
+		$color-dark,
+	),
+	success: (
+		$color-success,
+		$color-light,
+	),
+	danger: (
+		$color-danger,
+		$color-light,
+	),
+	warning: (
+		$color-warning,
+		$color-light,
+	),
+	info: (
+		$color-info,
+		$color-light,
+	),
+	dark: (
+		$color-dark,
+		$color-light,
+	),
+	light: (
+		$color-light,
+		$color-dark,
+	),
 );
 
 @each $name, $color in $color-classes {
+	$primary: nth($color, 1);
+
 	.text-#{$name} {
-		color: $color;
+		color: $primary;
 	}
+
 	.bg-#{$name} {
-		background-color: $color;
+		background-color: $primary;
 	}
 }
