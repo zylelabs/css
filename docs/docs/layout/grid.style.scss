@@ -1,10 +1,31 @@
-.column {
-	padding: 0.75rem;
+@mixin column-style() {
+	background: #2877ee;
+	padding: 0.8rem 0px;
+	text-align: center;
+	font-weight: 600;
+	border-radius: 0.5rem;
+}
 
+.column {
 	p {
-		background: #2877ee;
-		padding: 1rem;
-		border-radius: 0.5rem;
-		color: #fff;
+		@include column-style();
+	}
+}
+
+.columns-size-review {
+	.columns {
+		> * {
+			padding-bottom: 1rem;
+		}
+		.column-auto {
+			p {
+				background: gray;
+			}
+		}
+	}
+	[class^='column-'] {
+		p {
+			@include column-style();
+		}
 	}
 }
