@@ -4,37 +4,37 @@ import './button.style.scss';
 
 <div class="zyle-preview">
     <div class="buttons-preview">
-        <button class="btn btn-primary">
+        <button class="btn is-primary">
             Primary
         </button>
-        <button class="btn btn-secondary">
+        <button class="btn is-secondary">
             Secondary
         </button>
-        <button class="btn btn-success">
+        <button class="btn is-success">
             Success
         </button>
-        <button class="btn btn-danger">
+        <button class="btn is-danger">
             Danger
         </button>
-        <button class="btn btn-warning">
+        <button class="btn is-warning">
             Warning
         </button>
-        <button class="btn btn-info">
+        <button class="btn is-info">
             Info
         </button>
-        <button class="btn btn-dark">
+        <button class="btn is-dark">
             Dark
         </button>
-        <button class="btn btn-light">
+        <button class="btn is-light">
             Light
         </button>
     </div>
 </div>
 
 ```html
-<button class="btn btn-success">Success</button>
+<button class="btn is-success">Success</button>
 ```
 
 ```html
-<a href="#" class="btn btn-success">Success</a>
+<a href="#" class="btn is-success">Success</a>
 ```
