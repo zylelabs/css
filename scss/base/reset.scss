@@ -14,3 +14,14 @@ p {
 	margin: 0;
 	padding: 0;
 }
+
+a,
+::placeholder {
+	color: unset;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
