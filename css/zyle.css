@@ -15,6 +15,17 @@ p {
   padding: 0;
 }
 
+a,
+::placeholder {
+  color: unset;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .text-primary {
   color: #2877ee;
 }
@@ -77,6 +88,46 @@ p {
 
 .bg-light {
   background-color: #eeeeee;
+}
+
+.is-primary {
+  background-color: #2877ee !important;
+  color: #eeeeee !important;
+}
+
+.is-secondary {
+  background-color: #d3dff1 !important;
+  color: #3a3a41 !important;
+}
+
+.is-success {
+  background-color: #00c851 !important;
+  color: #eeeeee !important;
+}
+
+.is-danger {
+  background-color: #c52020 !important;
+  color: #eeeeee !important;
+}
+
+.is-warning {
+  background-color: #ff9c07 !important;
+  color: #eeeeee !important;
+}
+
+.is-info {
+  background-color: #1ba1ca !important;
+  color: #eeeeee !important;
+}
+
+.is-dark {
+  background-color: #3a3a41 !important;
+  color: #eeeeee !important;
+}
+
+.is-light {
+  background-color: #eeeeee !important;
+  color: #3a3a41 !important;
 }
 
 .p-0 {
@@ -969,93 +1020,37 @@ p {
   background-color: #e1e1e1;
   text-decoration: none;
 }
-.button.button-primary, .button.btn-primary,
-.btn.button-primary,
-.btn.btn-primary {
-  background-color: #2877ee;
-  color: #eeeeee;
+.button.is-primary:hover,
+.btn.is-primary:hover {
+  background-color: #115ed2 !important;
 }
-.button.button-primary:hover, .button.btn-primary:hover,
-.btn.button-primary:hover,
-.btn.btn-primary:hover {
-  background: #1368ea;
+.button.is-secondary:hover,
+.btn.is-secondary:hover {
+  background-color: #acc3e5 !important;
 }
-.button.button-secondary, .button.btn-secondary,
-.btn.button-secondary,
-.btn.btn-secondary {
-  background-color: #d3dff1;
-  color: #3a3a41;
+.button.is-success:hover,
+.btn.is-success:hover {
+  background-color: #00953c !important;
 }
-.button.button-secondary:hover, .button.btn-secondary:hover,
-.btn.button-secondary:hover,
-.btn.btn-secondary:hover {
-  background: #c0d1eb;
+.button.is-danger:hover,
+.btn.is-danger:hover {
+  background-color: #991919 !important;
 }
-.button.button-success, .button.btn-success,
-.btn.button-success,
-.btn.btn-success {
-  background-color: #00c851;
-  color: #eeeeee;
+.button.is-warning:hover,
+.btn.is-warning:hover {
+  background-color: #d37f00 !important;
 }
-.button.button-success:hover, .button.btn-success:hover,
-.btn.button-success:hover,
-.btn.btn-success:hover {
-  background: #00af47;
+.button.is-info:hover,
+.btn.is-info:hover {
+  background-color: #157d9d !important;
 }
-.button.button-danger, .button.btn-danger,
-.btn.button-danger,
-.btn.btn-danger {
-  background-color: #c52020;
-  color: #eeeeee;
+.button.is-dark:hover,
+.btn.is-dark:hover {
+  background-color: #222226 !important;
 }
-.button.button-danger:hover, .button.btn-danger:hover,
-.btn.button-danger:hover,
-.btn.btn-danger:hover {
-  background: #af1c1c;
-}
-.button.button-warning, .button.btn-warning,
-.btn.button-warning,
-.btn.btn-warning {
-  background-color: #ff9c07;
-  color: #eeeeee;
-}
-.button.button-warning:hover, .button.btn-warning:hover,
-.btn.button-warning:hover,
-.btn.btn-warning:hover {
-  background: #ed8e00;
-}
-.button.button-info, .button.btn-info,
-.btn.button-info,
-.btn.btn-info {
-  background-color: #1ba1ca;
-  color: #eeeeee;
-}
-.button.button-info:hover, .button.btn-info:hover,
-.btn.button-info:hover,
-.btn.btn-info:hover {
-  background: #188fb4;
-}
-.button.button-dark, .button.btn-dark,
-.btn.button-dark,
-.btn.btn-dark {
-  background-color: #3a3a41;
-  color: #eeeeee;
-}
-.button.button-dark:hover, .button.btn-dark:hover,
-.btn.button-dark:hover,
-.btn.btn-dark:hover {
-  background: #2e2e34;
-}
-.button.button-light, .button.btn-light,
-.btn.button-light,
-.btn.btn-light {
-  background-color: #eeeeee;
-  color: #3a3a41;
-}
-.button.button-light:hover, .button.btn-light:hover,
-.btn.button-light:hover,
-.btn.btn-light:hover {
-  background: #e1e1e1;
+.button.is-light:hover,
+.btn.is-light:hover {
+  background-color: #d5d5d5 !important;
 }
 
 .modal {
@@ -1104,20 +1099,34 @@ p {
 .navbar {
   display: flex;
   align-items: center;
+  padding: 0;
+}
+.navbar .navbar-brand {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
 }
 .navbar .navbar-menu {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
+  height: 100%;
 }
 .navbar .navbar-menu .navbar-section {
   display: flex;
   align-items: stretch;
+  height: 100%;
+}
+.navbar .navbar-menu a.navbar-item:hover {
+  background-color: rgba(0, 0, 0, 0.15) !important;
 }
 .navbar .navbar-item {
-  padding: 1rem 0.75rem;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  padding: 1rem 0.75rem;
+  height: 100%;
 }
 
 /*# sourceMappingURL=zyle.css.map */
