@@ -54,3 +54,13 @@ $color-classes: (
 		background-color: $primary;
 	}
 }
+
+@each $name, $color in $color-classes {
+	$primary: nth($color, 1);
+	$secondary: nth($color, 2);
+
+	.is-#{$name} {
+		background-color: $primary !important;
+		color: $secondary !important;
+	}
+}
