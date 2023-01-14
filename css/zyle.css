@@ -1008,7 +1008,7 @@ a,
 .button,
 .btn {
   background-color: #eeeeee;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 0.8rem;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -1051,6 +1051,16 @@ a,
 .button.is-light:hover,
 .btn.is-light:hover {
   background-color: #d5d5d5 !important;
+}
+.button.is-small,
+.btn.is-small {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+}
+.button.is-large,
+.btn.is-large {
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
 }
 
 .modal {
