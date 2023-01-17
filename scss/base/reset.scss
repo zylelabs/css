@@ -3,7 +3,9 @@ html {
 }
 
 body,
-button {
+button,
+input,
+textarea {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -13,6 +15,12 @@ body,
 p {
 	margin: 0;
 	padding: 0;
+}
+
+p,
+input,
+textarea {
+	font-size: 1rem;
 }
 
 a,
