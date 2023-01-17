@@ -1,0 +1,70 @@
+@mixin transitionInput() {
+	transition: border-color 0.2s ease;
+	transition: box-shadow 0.2s ease;
+}
+
+@mixin inputIsFocused($color) {
+	border-color: $color;
+	box-shadow: 0 0 0 0.1rem rgba($color, 0.2);
+}
+
+@mixin inputFocus($primary) {
+	&:focus,
+	&:focus-visible {
+		@include inputIsFocused($primary);
+		outline: 0;
+
+		@include transitionInput();
+	}
+}
+
+@mixin inputDisabled() {
+	&:disabled {
+		background-color: $color-light !important;
+		border: none;
+		cursor: not-allowed;
+	}
+}
+
+input,
+textarea {
+	&.input {
+		$background-color: #fff;
+		$text-color: #000;
+
+		border: 1px solid $color-gray;
+		border-radius: $border-radius;
+		padding: 0.5rem;
+		max-width: 100%;
+		width: 100%;
+		background-color: $background-color;
+		color: $text-color;
+
+		&::placeholder {
+			color: $color-gray;
+		}
+
+		@include transitionInput();
+		@include inputDisabled();
+		@include inputFocus($color-dark);
+
+		&.is-focused {
+			@include inputIsFocused($color-dark);
+		}
+
+		@each $name, $color in $color-classes {
+			$primary: nth($color, 1);
+
+			&.is-#{$name} {
+				@include resetIsColorClass();
+				@include transitionInput();
+				@include inputDisabled();
+				@include inputFocus($primary);
+
+				&.is-focused {
+					@include inputIsFocused($primary);
+				}
+			}
+		}
+	}
+}

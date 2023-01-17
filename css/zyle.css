@@ -4,7 +4,9 @@ html {
 }
 
 body,
-button {
+button,
+input,
+textarea {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -13,6 +15,12 @@ body,
 p {
   margin: 0;
   padding: 0;
+}
+
+p,
+input,
+textarea {
+  font-size: 1rem;
 }
 
 a,
@@ -838,6 +846,600 @@ a,
   flex-direction: column-reverse;
 }
 
+.card {
+  border-radius: 0.25rem;
+  border: 1px solid rgba(136, 136, 136, 0.1);
+  box-shadow: 0 0 0.4rem rgba(136, 136, 136, 0.1);
+}
+.card .card-header,
+.card .card-body,
+.card .card-footer {
+  padding: 0.8rem;
+}
+.card .card-header {
+  display: flex;
+  box-shadow: 0 0.1rem 0.4rem rgba(136, 136, 136, 0.1);
+}
+.card .card-header .card-header-title {
+  padding: 0.15rem 0;
+  flex-grow: 1;
+  font-weight: 500;
+}
+.card .card-body {
+  margin: 0.4rem 0;
+}
+.card .card-footer {
+  border-top: 1px solid rgba(136, 136, 136, 0.1);
+}
+
+.button,
+.btn {
+  background-color: #eeeeee;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.button:hover,
+.btn:hover {
+  background-color: #e1e1e1;
+  text-decoration: none;
+}
+.button.is-primary:hover,
+.btn.is-primary:hover {
+  background-color: #115ed2 !important;
+}
+.button.is-secondary:hover,
+.btn.is-secondary:hover {
+  background-color: #acc3e5 !important;
+}
+.button.is-success:hover,
+.btn.is-success:hover {
+  background-color: #00953c !important;
+}
+.button.is-danger:hover,
+.btn.is-danger:hover {
+  background-color: #991919 !important;
+}
+.button.is-warning:hover,
+.btn.is-warning:hover {
+  background-color: #d37f00 !important;
+}
+.button.is-info:hover,
+.btn.is-info:hover {
+  background-color: #157d9d !important;
+}
+.button.is-dark:hover,
+.btn.is-dark:hover {
+  background-color: #222226 !important;
+}
+.button.is-light:hover,
+.btn.is-light:hover {
+  background-color: #d5d5d5 !important;
+}
+.button.is-small,
+.btn.is-small {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+}
+.button.is-large,
+.btn.is-large {
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal.target:target {
+  visibility: visible;
+  opacity: 1;
+}
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal .modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: default;
+  z-index: -1;
+}
+.modal.modal-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 64px;
+}
+.navbar .navbar-brand {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+.navbar .navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+.navbar .navbar-menu .navbar-section {
+  display: flex;
+  align-items: stretch;
+}
+.navbar .navbar-menu a.navbar-item:hover {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+.navbar .navbar-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem 0.75rem;
+  height: 100%;
+}
+
+input.input,
+textarea.input {
+  border: 1px solid #888888;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input::placeholder,
+textarea.input::placeholder {
+  color: #888888;
+}
+input.input:disabled,
+textarea.input:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input:focus, input.input:focus-visible,
+textarea.input:focus,
+textarea.input:focus-visible {
+  border-color: #3a3a41;
+  box-shadow: 0 0 0 0.1rem rgba(58, 58, 65, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-focused,
+textarea.input.is-focused {
+  border-color: #3a3a41;
+  box-shadow: 0 0 0 0.1rem rgba(58, 58, 65, 0.2);
+}
+input.input.is-primary,
+textarea.input.is-primary {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-primary:disabled,
+textarea.input.is-primary:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-primary:focus, input.input.is-primary:focus-visible,
+textarea.input.is-primary:focus,
+textarea.input.is-primary:focus-visible {
+  border-color: #2877ee;
+  box-shadow: 0 0 0 0.1rem rgba(40, 119, 238, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-primary.is-focused,
+textarea.input.is-primary.is-focused {
+  border-color: #2877ee;
+  box-shadow: 0 0 0 0.1rem rgba(40, 119, 238, 0.2);
+}
+input.input.is-secondary,
+textarea.input.is-secondary {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-secondary:disabled,
+textarea.input.is-secondary:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-secondary:focus, input.input.is-secondary:focus-visible,
+textarea.input.is-secondary:focus,
+textarea.input.is-secondary:focus-visible {
+  border-color: #d3dff1;
+  box-shadow: 0 0 0 0.1rem rgba(211, 223, 241, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-secondary.is-focused,
+textarea.input.is-secondary.is-focused {
+  border-color: #d3dff1;
+  box-shadow: 0 0 0 0.1rem rgba(211, 223, 241, 0.2);
+}
+input.input.is-success,
+textarea.input.is-success {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-success:disabled,
+textarea.input.is-success:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-success:focus, input.input.is-success:focus-visible,
+textarea.input.is-success:focus,
+textarea.input.is-success:focus-visible {
+  border-color: #00c851;
+  box-shadow: 0 0 0 0.1rem rgba(0, 200, 81, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-success.is-focused,
+textarea.input.is-success.is-focused {
+  border-color: #00c851;
+  box-shadow: 0 0 0 0.1rem rgba(0, 200, 81, 0.2);
+}
+input.input.is-danger,
+textarea.input.is-danger {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-danger:disabled,
+textarea.input.is-danger:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-danger:focus, input.input.is-danger:focus-visible,
+textarea.input.is-danger:focus,
+textarea.input.is-danger:focus-visible {
+  border-color: #c52020;
+  box-shadow: 0 0 0 0.1rem rgba(197, 32, 32, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-danger.is-focused,
+textarea.input.is-danger.is-focused {
+  border-color: #c52020;
+  box-shadow: 0 0 0 0.1rem rgba(197, 32, 32, 0.2);
+}
+input.input.is-warning,
+textarea.input.is-warning {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-warning:disabled,
+textarea.input.is-warning:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-warning:focus, input.input.is-warning:focus-visible,
+textarea.input.is-warning:focus,
+textarea.input.is-warning:focus-visible {
+  border-color: #ff9c07;
+  box-shadow: 0 0 0 0.1rem rgba(255, 156, 7, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-warning.is-focused,
+textarea.input.is-warning.is-focused {
+  border-color: #ff9c07;
+  box-shadow: 0 0 0 0.1rem rgba(255, 156, 7, 0.2);
+}
+input.input.is-info,
+textarea.input.is-info {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-info:disabled,
+textarea.input.is-info:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-info:focus, input.input.is-info:focus-visible,
+textarea.input.is-info:focus,
+textarea.input.is-info:focus-visible {
+  border-color: #1ba1ca;
+  box-shadow: 0 0 0 0.1rem rgba(27, 161, 202, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-info.is-focused,
+textarea.input.is-info.is-focused {
+  border-color: #1ba1ca;
+  box-shadow: 0 0 0 0.1rem rgba(27, 161, 202, 0.2);
+}
+input.input.is-dark,
+textarea.input.is-dark {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-dark:disabled,
+textarea.input.is-dark:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-dark:focus, input.input.is-dark:focus-visible,
+textarea.input.is-dark:focus,
+textarea.input.is-dark:focus-visible {
+  border-color: #3a3a41;
+  box-shadow: 0 0 0 0.1rem rgba(58, 58, 65, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-dark.is-focused,
+textarea.input.is-dark.is-focused {
+  border-color: #3a3a41;
+  box-shadow: 0 0 0 0.1rem rgba(58, 58, 65, 0.2);
+}
+input.input.is-light,
+textarea.input.is-light {
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-light:disabled,
+textarea.input.is-light:disabled {
+  background-color: #eeeeee !important;
+  border: none;
+  cursor: not-allowed;
+}
+input.input.is-light:focus, input.input.is-light:focus-visible,
+textarea.input.is-light:focus,
+textarea.input.is-light:focus-visible {
+  border-color: #eeeeee;
+  box-shadow: 0 0 0 0.1rem rgba(238, 238, 238, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+input.input.is-light.is-focused,
+textarea.input.is-light.is-focused {
+  border-color: #eeeeee;
+  box-shadow: 0 0 0 0.1rem rgba(238, 238, 238, 0.2);
+}
+
+.field label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.field p {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+.field:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.field.is-primary {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-primary p {
+  color: #2877ee !important;
+}
+.field.is-primary input.input,
+.field.is-primary textarea.input {
+  border-color: #2877ee;
+  box-shadow: 0 0 0 0.1rem rgba(40, 119, 238, 0.2);
+}
+.field.is-primary input.input:focus, .field.is-primary input.input:focus-visible,
+.field.is-primary textarea.input:focus,
+.field.is-primary textarea.input:focus-visible {
+  border-color: #2877ee;
+  box-shadow: 0 0 0 0.1rem rgba(40, 119, 238, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+.field.is-secondary {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-secondary p {
+  color: #d3dff1 !important;
+}
+.field.is-secondary input.input,
+.field.is-secondary textarea.input {
+  border-color: #d3dff1;
+  box-shadow: 0 0 0 0.1rem rgba(211, 223, 241, 0.2);
+}
+.field.is-secondary input.input:focus, .field.is-secondary input.input:focus-visible,
+.field.is-secondary textarea.input:focus,
+.field.is-secondary textarea.input:focus-visible {
+  border-color: #d3dff1;
+  box-shadow: 0 0 0 0.1rem rgba(211, 223, 241, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+.field.is-success {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-success p {
+  color: #00c851 !important;
+}
+.field.is-success input.input,
+.field.is-success textarea.input {
+  border-color: #00c851;
+  box-shadow: 0 0 0 0.1rem rgba(0, 200, 81, 0.2);
+}
+.field.is-success input.input:focus, .field.is-success input.input:focus-visible,
+.field.is-success textarea.input:focus,
+.field.is-success textarea.input:focus-visible {
+  border-color: #00c851;
+  box-shadow: 0 0 0 0.1rem rgba(0, 200, 81, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+.field.is-danger {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-danger p {
+  color: #c52020 !important;
+}
+.field.is-danger input.input,
+.field.is-danger textarea.input {
+  border-color: #c52020;
+  box-shadow: 0 0 0 0.1rem rgba(197, 32, 32, 0.2);
+}
+.field.is-danger input.input:focus, .field.is-danger input.input:focus-visible,
+.field.is-danger textarea.input:focus,
+.field.is-danger textarea.input:focus-visible {
+  border-color: #c52020;
+  box-shadow: 0 0 0 0.1rem rgba(197, 32, 32, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+.field.is-warning {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-warning p {
+  color: #ff9c07 !important;
+}
+.field.is-warning input.input,
+.field.is-warning textarea.input {
+  border-color: #ff9c07;
+  box-shadow: 0 0 0 0.1rem rgba(255, 156, 7, 0.2);
+}
+.field.is-warning input.input:focus, .field.is-warning input.input:focus-visible,
+.field.is-warning textarea.input:focus,
+.field.is-warning textarea.input:focus-visible {
+  border-color: #ff9c07;
+  box-shadow: 0 0 0 0.1rem rgba(255, 156, 7, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+.field.is-info {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-info p {
+  color: #1ba1ca !important;
+}
+.field.is-info input.input,
+.field.is-info textarea.input {
+  border-color: #1ba1ca;
+  box-shadow: 0 0 0 0.1rem rgba(27, 161, 202, 0.2);
+}
+.field.is-info input.input:focus, .field.is-info input.input:focus-visible,
+.field.is-info textarea.input:focus,
+.field.is-info textarea.input:focus-visible {
+  border-color: #1ba1ca;
+  box-shadow: 0 0 0 0.1rem rgba(27, 161, 202, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+.field.is-dark {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-dark p {
+  color: #3a3a41 !important;
+}
+.field.is-dark input.input,
+.field.is-dark textarea.input {
+  border-color: #3a3a41;
+  box-shadow: 0 0 0 0.1rem rgba(58, 58, 65, 0.2);
+}
+.field.is-dark input.input:focus, .field.is-dark input.input:focus-visible,
+.field.is-dark textarea.input:focus,
+.field.is-dark textarea.input:focus-visible {
+  border-color: #3a3a41;
+  box-shadow: 0 0 0 0.1rem rgba(58, 58, 65, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+.field.is-light {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.field.is-light p {
+  color: #eeeeee !important;
+}
+.field.is-light input.input,
+.field.is-light textarea.input {
+  border-color: #eeeeee;
+  box-shadow: 0 0 0 0.1rem rgba(238, 238, 238, 0.2);
+}
+.field.is-light input.input:focus, .field.is-light input.input:focus-visible,
+.field.is-light textarea.input:focus,
+.field.is-light textarea.input:focus-visible {
+  border-color: #eeeeee;
+  box-shadow: 0 0 0 0.1rem rgba(238, 238, 238, 0.2);
+  outline: 0;
+  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+
 .container {
   margin: 0 auto;
   width: auto;
@@ -978,165 +1580,6 @@ a,
     width: 100%;
     max-width: 100%;
   }
-}
-.card {
-  border-radius: 0.25rem;
-  border: 1px solid rgba(136, 136, 136, 0.1);
-  box-shadow: 0 0 0.4rem rgba(136, 136, 136, 0.1);
-}
-.card .card-header,
-.card .card-body,
-.card .card-footer {
-  padding: 0.8rem;
-}
-.card .card-header {
-  display: flex;
-  box-shadow: 0 0.1rem 0.4rem rgba(136, 136, 136, 0.1);
-}
-.card .card-header .card-header-title {
-  padding: 0.15rem 0;
-  flex-grow: 1;
-  font-weight: 500;
-}
-.card .card-body {
-  margin: 0.4rem 0;
-}
-.card .card-footer {
-  border-top: 1px solid rgba(136, 136, 136, 0.1);
-}
-
-.button,
-.btn {
-  background-color: #eeeeee;
-  padding: 0.5rem 0.8rem;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
-}
-.button:hover,
-.btn:hover {
-  background-color: #e1e1e1;
-  text-decoration: none;
-}
-.button.is-primary:hover,
-.btn.is-primary:hover {
-  background-color: #115ed2 !important;
-}
-.button.is-secondary:hover,
-.btn.is-secondary:hover {
-  background-color: #acc3e5 !important;
-}
-.button.is-success:hover,
-.btn.is-success:hover {
-  background-color: #00953c !important;
-}
-.button.is-danger:hover,
-.btn.is-danger:hover {
-  background-color: #991919 !important;
-}
-.button.is-warning:hover,
-.btn.is-warning:hover {
-  background-color: #d37f00 !important;
-}
-.button.is-info:hover,
-.btn.is-info:hover {
-  background-color: #157d9d !important;
-}
-.button.is-dark:hover,
-.btn.is-dark:hover {
-  background-color: #222226 !important;
-}
-.button.is-light:hover,
-.btn.is-light:hover {
-  background-color: #d5d5d5 !important;
-}
-.button.is-small,
-.btn.is-small {
-  font-size: 0.8rem;
-  padding: 0.2rem 0.4rem;
-}
-.button.is-large,
-.btn.is-large {
-  font-size: 1.4rem;
-  padding: 0.5rem 1rem;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  transition: opacity 200ms;
-  z-index: 0;
-  visibility: hidden;
-  opacity: 0;
-}
-.modal.target:target {
-  visibility: visible;
-  opacity: 1;
-}
-.modal.active {
-  visibility: visible;
-  opacity: 1;
-}
-.modal .modal-background {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  cursor: default;
-  z-index: -1;
-}
-.modal.modal-content {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-.navbar .navbar-brand {
-  display: flex;
-  align-items: stretch;
-  height: 100%;
-}
-.navbar .navbar-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-  height: 100%;
-}
-.navbar .navbar-menu .navbar-section {
-  display: flex;
-  align-items: stretch;
-  height: 100%;
-}
-.navbar .navbar-menu a.navbar-item:hover {
-  background-color: rgba(0, 0, 0, 0.15) !important;
-}
-.navbar .navbar-item {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 1rem 0.75rem;
-  height: 100%;
 }
 
 /*# sourceMappingURL=zyle.css.map */
