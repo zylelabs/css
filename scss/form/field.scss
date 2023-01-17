@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+.field {
+	label {
+		font-weight: 600;
+		display: block;
+		margin-bottom: map.get($spacing-sizes, 2);
+	}
+
+	p {
+		font-size: 0.75rem;
+		margin-top: map.get($spacing-sizes, 1);
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 0.75rem;
+	}
+
+	@each $name, $color in $color-classes {
+		$primary: nth($color, 1);
+
+		&.is-#{$name} {
+			@include resetIsColorClass();
+
+			p {
+				color: $primary !important;
+			}
+
+			input,
+			textarea {
+				&.input {
+					@include inputFocus($primary);
+					@include inputIsFocused($primary);
+				}
+			}
+		}
+	}
+}
