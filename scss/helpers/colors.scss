@@ -64,3 +64,8 @@ $color-classes: (
 		color: $secondary !important;
 	}
 }
+
+@mixin resetIsColorClass {
+	background-color: #fff !important;
+	color: #000 !important;
+}
