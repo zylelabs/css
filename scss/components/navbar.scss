@@ -20,6 +20,17 @@
 		.navbar-section {
 			display: flex;
 			align-items: stretch;
+			flex: 1 0 0;
+
+			&:not(:first-child):last-child {
+				justify-content: flex-end;
+			}
+		}
+
+		.navbar-center {
+			display: flex;
+			align-items: stretch;
+			flex: 0 0 auto;
 		}
 
 		a.navbar-item {
