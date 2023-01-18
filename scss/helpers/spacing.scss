@@ -6,27 +6,27 @@
 
 	@each $property, $shortcut in $properties {
 		.#{$shortcut}-#{$id} {
-			#{$property}: $size;
+			#{$property}: $size !important;
 		}
 		.#{$shortcut}t-#{$id} {
-			#{$property}-top: $size;
+			#{$property}-top: $size !important;
 		}
 		.#{$shortcut}r-#{$id} {
-			#{$property}-right: $size;
+			#{$property}-right: $size !important;
 		}
 		.#{$shortcut}b-#{$id} {
-			#{$property}-bottom: $size;
+			#{$property}-bottom: $size !important;
 		}
 		.#{$shortcut}l-#{$id} {
-			#{$property}-left: $size;
+			#{$property}-left: $size !important;
 		}
 		.#{$shortcut}x-#{$id} {
-			#{$property}-left: $size;
-			#{$property}-right: $size;
+			#{$property}-left: $size !important;
+			#{$property}-right: $size !important;
 		}
 		.#{$shortcut}y-#{$id} {
-			#{$property}-top: $size;
-			#{$property}-bottom: $size;
+			#{$property}-top: $size !important;
+			#{$property}-bottom: $size !important;
 		}
 	}
 }
