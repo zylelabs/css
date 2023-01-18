@@ -49,6 +49,14 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
+			metadata: [
+				{
+					name: 'description',
+					content: 'Take off with a lightweight, responsive CSS framework',
+				},
+				{ name: 'keywords', content: 'Zyle, css, Zyle Css, zyle.css, framework' },
+				{ name: 'author', content: 'ZyleLabs' },
+			],
 			navbar: {
 				title: 'ZYLE.CSS',
 				logo: {
