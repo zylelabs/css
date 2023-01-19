@@ -1,4 +1,6 @@
-html {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -12,12 +14,15 @@ textarea {
 
 html,
 body,
-p {
+p,
+ul {
 	margin: 0;
 	padding: 0;
 }
 
+body,
 p,
+a,
 input,
 textarea {
 	font-size: 1rem;
@@ -28,8 +33,6 @@ a,
 	color: unset;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+a {
+	text-decoration: none;
 }
