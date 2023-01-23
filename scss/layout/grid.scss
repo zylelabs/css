@@ -13,7 +13,6 @@ $container-spacing: 0.5rem;
 	}
 }
 
-.cols,
 .columns {
 	display: flex;
 	flex-flow: row wrap;
@@ -28,17 +27,14 @@ $container-spacing: 0.5rem;
 }
 
 .col,
-.column,
-.col-auto,
-.column-auto {
+.col-auto {
 	flex: 1 0 0%;
 	width: auto;
 	max-width: none;
 }
 
 @for $col from 1 to 13 {
-	.col-#{$col},
-	.column-#{$col} {
+	.col-#{$col} {
 		flex: 0 0 auto;
 		width: 100%;
 		max-width: calc(100% / (12 / $col));
