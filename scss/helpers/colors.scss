@@ -1,4 +1,4 @@
-$color-primary: #2877ee;
+$color-primary: #1c6fee;
 $color-secondary: #d3dff1;
 $color-success: #00c851;
 $color-danger: #c52020;
@@ -68,4 +68,8 @@ $color-classes: (
 @mixin resetIsColorClass {
 	background-color: #fff !important;
 	color: #000 !important;
+}
+
+body {
+	color: $color-dark;
 }

@@ -34,8 +34,11 @@
 		}
 
 		a.navbar-item {
+			transition-duration: 0.2s;
+
 			&:hover {
-				background-color: rgba(0, 0, 0, 0.15) !important;
+				color: $color-primary;
+				transition-duration: 0.2s;
 			}
 		}
 	}

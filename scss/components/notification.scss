@@ -1,0 +1,38 @@
+.notification {
+	display: inline-block;
+	background: $color-gray;
+	color: $color-light;
+	border-radius: $border-radius;
+	width: 100%;
+	padding: 0.5rem;
+
+	.notification-header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.4rem;
+		font-weight: 500;
+
+		.btn-close {
+			margin-left: 1rem;
+			padding: 0 0.2rem;
+			text-transform: uppercase;
+		}
+	}
+
+	&.is-fixed {
+		width: auto;
+		position: fixed;
+		margin: 0.5rem;
+	}
+
+	@each $direction in (top, bottom, left, right) {
+		&.is-#{$direction} {
+			#{$direction}: 0;
+		}
+	}
+
+	&.is-center {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

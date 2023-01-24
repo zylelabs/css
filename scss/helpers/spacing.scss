@@ -1,9 +1,21 @@
-@each $id, $size in $spacing-sizes {
-	$properties: (
-		padding: 'p',
-		margin: 'm',
-	);
+$spacing-sizes: (
+	0: 0,
+	1: 0.25rem,
+	2: 0.5rem,
+	3: 1rem,
+	4: 1.5rem,
+	5: 2rem,
+	6: 3rem,
+	7: 4rem,
+	auto: auto,
+);
 
+$properties: (
+	padding: 'p',
+	margin: 'm',
+);
+
+@each $id, $size in $spacing-sizes {
 	@each $property, $shortcut in $properties {
 		.#{$shortcut}-#{$id} {
 			#{$property}: $size !important;
@@ -27,6 +39,38 @@
 		.#{$shortcut}y-#{$id} {
 			#{$property}-top: $size !important;
 			#{$property}-bottom: $size !important;
+		}
+	}
+}
+
+@each $bk, $screen-size in $screen-breakpoints {
+	@media (max-width: $screen-size) {
+		@each $id, $size in $spacing-sizes {
+			@each $property, $shortcut in $properties {
+				.#{$shortcut}-#{$bk}-#{$id} {
+					#{$property}: $size !important;
+				}
+				.#{$shortcut}t-#{$bk}-#{$id} {
+					#{$property}-top: $size !important;
+				}
+				.#{$shortcut}r-#{$bk}-#{$id} {
+					#{$property}-right: $size !important;
+				}
+				.#{$shortcut}b-#{$bk}-#{$id} {
+					#{$property}-bottom: $size !important;
+				}
+				.#{$shortcut}l-#{$bk}-#{$id} {
+					#{$property}-left: $size !important;
+				}
+				.#{$shortcut}x-#{$bk}-#{$id} {
+					#{$property}-left: $size !important;
+					#{$property}-right: $size !important;
+				}
+				.#{$shortcut}y-#{$bk}-#{$id} {
+					#{$property}-top: $size !important;
+					#{$property}-bottom: $size !important;
+				}
+			}
 		}
 	}
 }
