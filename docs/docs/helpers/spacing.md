@@ -2,7 +2,7 @@
 
 ## Margin and Padding
 
-We have the spacing classes using **margin** and **padding**, where the format for use is **{[property](#properties)}{[direction](#directions)}-{[size](#sizes)}** with **sizes** from `*-0` **(0rem)** to `*-9` **(4rem)**.
+We have the spacing classes using **margin** and **padding**, where the format for use is **{[property](#properties)}{[direction](#directions)}-{[size](#sizes)}** with **sizes** from `*-0` **(0rem)** to `*-7` **(4rem)**.
 
 ### Properties
 
@@ -28,13 +28,11 @@ We have the spacing classes using **margin** and **padding**, where the format f
     <li><code>*-0</code> for <code>0</code></li>
     <li><code>*-1</code> for <code>0.25rem</code></li>
     <li><code>*-2</code> for <code>0.5rem</code></li>
-    <li><code>*-3</code> for <code>0.75rem</code></li>
-    <li><code>*-4</code> for <code>1rem</code></li>
-    <li><code>*-5</code> for <code>1.5rem</code></li>
-    <li><code>*-6</code> for <code>2rem</code></li>
-    <li><code>*-7</code> for <code>2.5rem</code></li>
-    <li><code>*-8</code> for <code>3rem</code></li>
-    <li><code>*-9</code> for <code>4rem</code></li>
+    <li><code>*-3</code> for <code>1rem</code></li>
+    <li><code>*-4</code> for <code>1.5rem</code></li>
+    <li><code>*-5</code> for <code>2rem</code></li>
+    <li><code>*-6</code> for <code>3rem</code></li>
+    <li><code>*-7</code> for <code>4rem</code></li>
     <li><code>*-auto</code> for <code>auto</code></li>
 </ul>
 
