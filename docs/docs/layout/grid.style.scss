@@ -6,7 +6,7 @@
 	border-radius: 0.5rem;
 }
 
-.column {
+.col {
 	p {
 		@include column-style();
 	}
@@ -17,13 +17,13 @@
 		> * {
 			padding-bottom: 1rem;
 		}
-		.column-auto {
+		.col-auto {
 			p {
 				background: gray;
 			}
 		}
 	}
-	[class^='column-'] {
+	[class^='col-'] {
 		p {
 			@include column-style();
 		}
