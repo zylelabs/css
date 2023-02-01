@@ -1,4 +1,5 @@
 $columns-gutter: 0.5rem;
+$column-gap: 0.5rem;
 $container-spacing: 0.5rem;
 
 .container {
@@ -15,53 +16,64 @@ $container-spacing: 0.5rem;
 
 .columns {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	margin-left: -$columns-gutter;
-	margin-right: -$columns-gutter;
+	flex-wrap: wrap;
+	margin: -$columns-gutter;
 
 	> * {
-		padding-left: $columns-gutter;
-		padding-right: $columns-gutter;
+		padding: $columns-gutter;
 	}
 }
 
-.col,
-.col-auto {
-	flex: 1 0 0%;
+@mixin col-auto() {
+	flex: 1 1 0;
 	width: auto;
 	max-width: none;
 }
 
+.col,
+.column,
+.column-auto,
+.col-auto {
+	@include col-auto();
+
+	@media (max-width: screen-breakpoint('sm')) {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
 @for $col from 1 to 13 {
-	.col-#{$col} {
-		flex: 0 0 auto;
+	.col-#{$col},
+	.column-#{$col} {
+		flex: 1 1 auto;
 		width: 100%;
 		max-width: calc(100% / (12 / $col));
+
+		@media (max-width: screen-breakpoint('sm')) {
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 }
 
 @each $bk, $size in $screen-breakpoints {
 	@media (max-width: $size) {
 		@for $col from 1 to 13 {
-			.col-#{$bk}-#{$col} {
-				flex: 0 0 auto;
+			.col-#{$bk}-#{$col},
+			.column-#{$bk}-#{$col} {
+				flex: 1 1 auto;
 				width: 100%;
 				max-width: calc(100% / (12 / $col));
 			}
-			.col-#{$bk}-auto {
-				flex: 1 0 0%;
-				width: auto;
-				max-width: none;
+
+			.col-#{$bk}-auto,
+			.column-#{$bk}-auto {
+				@include col-auto();
 			}
+		}
+
+		.hide-#{$bk} {
+			display: none !important;
 		}
 	}
 }
-
-// @media (max-width: 991px) {
-// 	[class^='column-'],
-// 	[class^='col-'] {
-// 		width: 100%;
-// 		max-width: 100%;
-// 	}
-// }
