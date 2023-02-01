@@ -8,6 +8,6 @@ $screen-breakpoints: (
 	xs: 500px,
 );
 
-@function screen-breakpoint($size) {
-	@return map-get($screen-breakpoints, $size);
+@function screen-breakpoint($breakpoint) {
+	@return map-get($screen-breakpoints, $breakpoint);
 }
