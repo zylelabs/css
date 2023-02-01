@@ -1,0 +1,56 @@
+@mixin hideDropdownMenu() {
+	.dropdown-menu {
+		display: none;
+	}
+}
+
+@mixin dropdownAlign($align) {
+	.dropdown-menu {
+		@if $align == 'right' {
+			left: auto;
+			right: 0;
+		} @else {
+			left: 0;
+			right: auto;
+		}
+	}
+}
+
+@mixin showDropdownMenu() {
+	.dropdown-menu {
+		display: block;
+	}
+}
+
+.dropdown {
+	@include hideDropdownMenu();
+	position: relative;
+	display: inline-flex;
+
+	.dropdown-menu {
+		position: absolute;
+		border-radius: $border-radius;
+		box-shadow: 0 0 0.4rem rgba($color-gray, 0.15);
+		background: #fff;
+		padding: 0.5rem 0.8rem;
+		min-width: 10rem;
+		top: 100%;
+		left: 0;
+		right: auto;
+		z-index: 50;
+	}
+
+	&.is-right {
+		@include dropdownAlign('right');
+	}
+
+	&.is-hoverable {
+		&:hover {
+			@include showDropdownMenu();
+		}
+	}
+
+	&.is-active {
+		@include showDropdownMenu();
+	}
+}
